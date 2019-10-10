@@ -1,5 +1,0 @@
-=VALUE(IFERROR(IF(FIND("standard",D2)>0,RIGHT(D2,LEN(D2)-FIND("-",D2,FIND("-",D2)+1))),
-            IFERROR(IF(FIND("highcpu",D2)>0,RIGHT(D2,LEN(D2)-FIND("-",D2,FIND("-",D2)+1))),
-                IFERROR(IF(FIND("highmem",D2)>0,RIGHT(D2,LEN(D2)-FIND("-",D2,FIND("-",D2)+1))),
-                    IFERROR(IF(FIND("megamem",D2)>0,RIGHT(D2,LEN(D2)-FIND("-",D2,FIND("-",D2)+1))),
-                        IFERROR(IF(FIND("custom",D2)>0,MID(D2, FIND("-",D2)+1,FIND("-",D2,FIND("-",D2)+1)-FIND("-",D2)-1)),""))))))
