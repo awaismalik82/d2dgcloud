@@ -1,5 +1,5 @@
 #!/bin/bash
-projectIdList="clgx-ins-gpl-db-glb-prd-4257"
+projectIdList="clgx-msb-glb-sbx-abc9,clgx-msb-glb-prd-ea66"
 Field_Separator=$IFS
  
 # set comma as internal field separator for the string list
