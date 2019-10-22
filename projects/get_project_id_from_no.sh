@@ -1,3 +1,3 @@
 #!/bin/bash
-projectNoList="clgx-ins-gpl-db-glb-prd\|clgx-valsvcs-app-prd-cef8"
+projectNoList="487324219445"
 gcloud projects list | grep $projectNoList
