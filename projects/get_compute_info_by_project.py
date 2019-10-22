@@ -17,10 +17,15 @@ with open('cl_gce_instances.csv', 'a') as csvFile:
     for node in driver.list_nodes():     
         zoneId = node.extra.get("zone")
         machineType = node.extra.get("machineType")
-        row = [PROJECT, node.name, zoneId.name, machineType[machineType.rfind("/")+1:], node.state]
+        localSSD = "false"
+
+        for disk in node.extra.get("disks"):
+            if disk.get("type") == "SCRATCH":
+                localSSD = "true"
+
+        row = [PROJECT, node.name, zoneId.name, machineType[machineType.rfind("/")+1:], node.state, localSSD]
         writer = csv.writer(csvFile)
         writer.writerow(row)
         print(row)
-        print(node.extra)
 
 csvFile.close()
