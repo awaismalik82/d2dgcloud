@@ -3,15 +3,15 @@
 declare -i inc
 inc=0
 
-gcloud projects list | while read -r projectLine ; do
+gcloud projects list | cut -d ' ' -f1 | while read -r projectId ; do
     if (( $inc == 0 )) ; then
         ((inc+=1))
         continue
     fi
 
-    projectId=${projectLine:0:32}
     echo $projectId + $inc
     python2 get_compute_info_by_project.py $projectId
+    
     ((inc+=1))
     
 done
