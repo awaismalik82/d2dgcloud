@@ -15,7 +15,7 @@ driver = cls('', '', project = PROJECT)
 
 with open('cl_net_gce_instances.csv', 'a') as csvFile:
 
-    noOfNodes = len(driver.list_nodes)
+    noOfNodes = len(driver.list_nodes())
     row = [NETWORKPROJECT, PROJECT, noOfNodes]
     writer = csv.writer(csvFile)
     writer.writerow(row)
