@@ -4,8 +4,8 @@ from libcloud.compute.providers import get_driver
 import sys
 import csv
 
-#USER_ID = "sax@project-id.iam.gserviceaccount.com"
-#KEYFILE = "sa-key.json"
+#USER_ID = "sa@project-id.iam.gserviceaccount.com"
+#KEYFILE = "key.json"
 PROJECT = str(sys.argv[1])
 
 cls = get_driver(Provider.GCE)
