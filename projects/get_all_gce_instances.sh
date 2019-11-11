@@ -1,5 +1,4 @@
 #!/bin/bash
-
 netProjectId=""
 
 declare -i instances

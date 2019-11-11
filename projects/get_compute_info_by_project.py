@@ -6,6 +6,7 @@ import csv
 
 #USER_ID = "sa@project-id.iam.gserviceaccount.com"
 #KEYFILE = "key.json"
+
 PROJECT = str(sys.argv[1])
 
 cls = get_driver(Provider.GCE)

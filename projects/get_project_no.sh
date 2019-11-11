@@ -1,4 +1,5 @@
 #!/bin/bash
+
 projectIdList=""
 
 Field_Separator=$IFS

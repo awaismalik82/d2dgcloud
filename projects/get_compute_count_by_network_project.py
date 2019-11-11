@@ -6,6 +6,7 @@ import csv
 
 #USER_ID = "sa@project-id.iam.gserviceaccount.com"
 #KEYFILE = "key.json"
+
 NETWORKPROJECT = str(sys.argv[1])
 PROJECT = str(sys.argv[2])
 

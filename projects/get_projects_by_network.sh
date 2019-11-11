@@ -1,4 +1,5 @@
 #!/bin/bash
+
 netProjectIdList=""
 
 Field_Separator=$IFS
