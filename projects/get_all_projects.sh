@@ -1,5 +1,4 @@
 #!/bin/bash
-
 declare -i inc
 inc=1
 

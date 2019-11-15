@@ -1,6 +1,5 @@
 #!/bin/bash
-
-netProjectId="clgx-network-prd-de02"
+netProjectId=""
 
 declare -i instances
 echo $instances
