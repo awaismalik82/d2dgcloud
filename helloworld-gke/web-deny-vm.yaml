@@ -1,0 +1,24 @@
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: web-deny-vm
+  namespace: helloworld
+spec:
+  podSelector:
+    matchLabels:
+      app: hello
+  
+  policyTypes:
+  - Ingress
+  
+  ingress:
+  - from:
+    - ipBlock:
+        cidr: 10.30.0.0/16
+        except:
+        - 10.30.0.4/32
+#    - ipBlock:
+#        cidr: 10.50.0.0/16
+    - namespaceSelector:
+        matchLabels:
+          app: helloworld-ns
